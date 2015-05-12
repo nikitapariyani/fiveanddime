@@ -1,0 +1,586 @@
+/*
+Theme Name: fiveanddime
+Theme URI: http://themekraft.com/tk/
+Author: ThemeKraft
+Author URI: http://themekraft.com/
+Description: Hi, I am the ultra minimal starter theme fiveanddime, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
+Version: 1.1.2
+License: GNU General Public License
+License URI: see license.txt
+Tags: coffee, nightshift
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
+the _s starter theme from Automattic, the guys behind WordPress.
+
+_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Twitter Bootstrap
+
+
+*/
+
+/* Import the necessary TK Bootstrap WP CSS additions */
+@import url( includes/css/bootstrap-wp.css );
+
+
+
+/* My Minimal WordPress Styling comes here */
+
+/* This is a small security for too long strings titles */
+body {
+	word-wrap: break-word;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content-inner {
+	padding-bottom: 1.5em;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+
+/* Clearing */
+.clear {
+	clear: both;
+}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }
+
+/*
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+
+
+ == Infinite Scrolling by Jetpack ==
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+
+/* Globally hidden elements when Infinite Scroll is supported and in use.
+ * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
+
+/*
+.infinite-scroll .page-links,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+*/
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+/*
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+*/
+
+/* Hey, if you don't need my comments anymore, just delete me! :)  */
+
+
+#front-page-content{
+    margin-top:80px;
+}
+.container{
+    width:100%;
+    padding:0;
+}
+.site-navigation{
+    margin-top: -30px;
+}
+.navbar-default {
+  background-color: white;
+  border-color: white;
+  border-bottom: 2px solid #e5e5e5;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #00BFFF;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-brand {
+  color: #00BFFF;
+  font-family: 'Lobster', sans-serif;
+  font-size: 30px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #00BFFF;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #00BFFF;
+}
+.navbar{
+    padding:15px 0;
+    border-radius: 0;
+}
+.navbar-nav{
+    float:right;
+}
+.navbar-nav > li{
+    padding:0 20px;
+    font-size: 15px;
+}
+/*login styling*/
+.login-section{
+   
+}
+.login-section div ul li{
+    display:inline-block;
+    list-style: none;
+}
+.search-form label{
+    width:77%;
+}
+.inner-addon { 
+    position: relative; 
+}
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .glyphicon  { left:  285px;}
+.right-addon .glyphicon { right: 0px;}
+.left-addon input  { padding-left:  10px; }
+.right-addon input { padding-right: 30px; }
+.form-control{
+      font-size: 12px;
+  font-family: cursive;
+  border:1px solid #00bfff;
+}
+.btn-default {
+  color: #fff;
+  background-color: #00bfff;
+  border-color: #00bfff;
+}
+#item-1{
+    margin: 0 0 10px 447px;
+}
+#item-2{
+    margin: 0 0 10px 50px;
+}
+#item-1, #item-2
+{
+      background-color: rgba(18, 146, 237, 0.21);
+  width: 20%;
+  padding: 10px;
+  border-radius:5%;
+  text-align: center;
+  border: 2px solid black;
+}
+/*slider*/
+.home{
+    height:520px;
+    margin-top:45px;
+    margin-bottom: 50px;
+}
+.slider-area{
+    padding-left:30px;
+}
+.carousel-inner{
+    width:100%;
+    position:relative;
+    
+}
+.carousel-inner img{
+    width:100%; 
+}
+.carousel-inner .item img{
+    height:500px;
+}
+.carousel-control{
+    opacity:0;
+    color:darkturquoise;
+}
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+}
+.home-image img {
+    padding-right:20px;
+    height: 240px;
+    width:100%;
+}
+.home-section div:first-child img{
+    margin-bottom:20px;
+}
+
+/*home section*/
+.featured-products,.featured-brands{
+    background-color: white;
+}
+.products-title,.brands-title{
+    text-align: center;
+}
+.title1 {
+display: block;
+padding-top:10px;
+}
+.title1 h2 {
+z-index: 1;
+position: relative;
+text-align: center;
+color:#00BFFF;
+}
+.title1 .line {
+background: #d3d3d3;
+height: 1px;
+display: block;
+top: 18px;
+width: 60%;
+margin-left: 20%;
+position: absolute;
+}
+.title1 .text {
+    background: white;
+z-index: 20;
+position: relative;
+text-align: center;
+padding: 10px 14px;
+border:1px solid #d3d3d3;
+font-family: monospace;
+}
+.featured-products-section .col-lg-4{
+    margin-top: 20px;
+    
+}
+.featured-products-section{
+    width:60%;
+    margin:50px 20%;
+    height:350px;
+    
+}
+.category{
+    
+    border:1px solid #c3c3c3;
+}
+figcaption h4{
+    text-align: center;
+}
+.category img{
+    height:300px;
+    width:340px;
+    padding:10px;
+}
+/*brands section*/
+
+.brands-slider{
+    width:80%;
+    margin:50px 10%;
+    height:250px;
+    
+}
+.brands-slider .col-md-4 h1{
+    color: #00BFFF;
+}
+.brands-slider .col-md-4 p{
+    
+}
+.brands-slider .col-md-4{
+    padding:0 40px;
+}
+.cat-flex .slides li img{
+    padding:10px;
+    height:200px;
+    width:100%
+}
+.flexslider {
+  margin:0;
+  background: #d3d3d3;
+  border: none;
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow:none;
+  zoom: 1;
+}
+.cat-flex{
+    border:1px solid #e5e5e5;
+}
+/*sidebar navigation*/
+#style-switcher {
+background-color: #fff;
+width: 185px;
+position: fixed;
+top: 82px;
+z-index: 999;
+border-radius: 0 0 3px 0;
+left: -183px;
+border: 1px solid #e4e4e4;
+border-left: 0;
+border-top: 0;
+box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08);
+}
+#style-switcher li {
+    display: inline-block;
+    width:100%;
+    padding-left: 7px;
+    
+}
+#style-switcher h2 {
+background-color: #6b6b6b;
+color: #fff;
+font-size: 15px;
+padding: 11px 0 10px 7px;
+}
+#style-switcher h2 a {
+background-color: #fff;
+height: 43px;
+position: absolute;
+right: -43px;
+text-indent: -9999px;
+top: 0;
+width: 43px;
+border-radius: 0 3px 3px 0;
+}
+#style-switcher h2 a span {
+ background: url("includes/images/image-13.jpg") no-repeat 0px center transparent;
+-webkit-animation: rotateInfinite 2s infinite linear;
+-webkit-animation: rotateInfinite 2s infinite linear;
+-moz-animation: rotateInfinite 2s infinite linear;
+-o-animation: rotateInfinite 2s linear;
+animation: rotateInfinite 2s infinite linear;
+width: 60px;
+height: 60px;
+border:1px solid black;
+padding:2px;
+display: block;
+}
+#style-switcher div {
+padding: 2px 12px 10px 12px;
+}
+#style-switcher h3 {
+color: #888;
+font-size: 14px;
+margin: -2px 0 -9px 8px;
+}
+.colors {
+list-style: none;
+margin: 12px 0px 10px 0;
+overflow: hidden;
+padding: 0;
+}
+.colors li {
+margin: 10px 2px 0px 6px;
+display: inline-block;
+}
+.colors li a {
+display: block;
+width: 45px;
+height: 29px;
+cursor: pointer;
+border-radius: 5px;
+}
+/*recently added*/
+.recent-products-title{
+    margin-bottom: 40px;
+}
+.recent-flex {
+    margin:10px;
+    padding:10px;
+    border:1px solid #e5e5e5;
+    background-color: lightcyan;
+}
+.slides li a h3{
+    font-size: 20px;
+    text-align: center;
+}
+.recent-flex .flex-control-nav{
+    bottom:0px;
+}
+.recent-flex .slides li a img{
+    height:250px;
+    width:100%;
+}
+
+
+
+/*footer styling*/
+.site-footer{
+  padding: 10px;
+  text-align: center;
+  background-color: #697071;
+  font-size:16px;
+  color: white;
+  }
+  .site-footer-inner{
+  padding-top:7px;
+  padding:25px 100px;
+  }
+  .promises{
+      padding:10px 20px;
+  }
+  .copyrights p{
+      font-size: 15px;
+  }
+  .promises p{
+      font-size: 15px;
+  }
+  .promises .title{
+      font-size: 35px;
+  }
+  .site-footer{
+      font-family:sans-serif;
+  }
+  
+  /*recently added*/
+  .row-fluid li{
+      display:inline-block;
+      list-style: none;
+  }
+  .row-fluid{
+      padding-top: 30px;
+  }
+  
+  /*single product page styling*/
+ /* .product{
+      margin-top:100px;
+  }*/
+  .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+      width:40%;
+      margin-left:100px;
+      border:1px solid #e5e5e5;
+      padding:10px;
+}
+div.pp_woocommerce .pp_content_container {
+  background: #00bfff;
+  border-radius: 3px;
+  box-shadow: 0 1px 30px rgba(0,0,0,.25);
+  padding: 20px 0;
+}
