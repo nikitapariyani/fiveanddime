@@ -17,7 +17,7 @@
 <div class="login-section">
     <div class="col-md-8">
     <ul class="menu">
-                    <li id="item-1" class="col-md-6"><a href="http://fruitezy.sketchpadideas.com/my-account/">
+                    <li id="item-1" class="col-md-6"><a href="<?php echo do_shortcode('[woocommerce_my_account order_count="12"]'); ?>">
                             <?php
                                 if ( is_user_logged_in() ) {
                                         echo 'My Account';
@@ -85,15 +85,15 @@
 </div>
 <div class="home-section col-md-4">
     <div class="home-image">
-        <?php if ( get_theme_mod('slide_2') ) {  ?>
-        <a href="#"><img src="<?php echo get_theme_mod('slide_2'); ?>" /></a>
+        <?php if ( get_theme_mod('home_image_1') ) {  ?>
+        <a href="#"><img src="<?php echo get_theme_mod('home_image_1'); ?>" /></a>
         <?php } else {  ?>
         <a href="#"><img  src="<?php echo get_template_directory_uri();?>/includes/images/image-4.jpg" alt="..."></a>
       <?php }?> 
     </div>
     <div class="home-image">
-        <?php if ( get_theme_mod('slide_2') ) {  ?>
-        <a href="#"><img src="<?php echo get_theme_mod('slide_2'); ?>" /></a>
+        <?php if ( get_theme_mod('home_image_2') ) {  ?>
+        <a href="#"><img src="<?php echo get_theme_mod('home_image_2'); ?>" /></a>
         <?php } else {  ?>
       <a href="#"><img src="<?php echo get_template_directory_uri();?>/includes/images/image-6.jpg" alt="..."></a>
       <?php }?> 
@@ -104,8 +104,8 @@
 <div class="featured-products">
     <div class="products-title">
         <div class="title1">
-        <?php if ( get_theme_mod('home_section')) {  ?>
-          <h2><?php echo (get_theme_mod('home_section')); ?></h2>
+        <?php if ( get_theme_mod('featured_section')) {  ?>
+          <h2><?php echo (get_theme_mod('featured_section')); ?></h2>
           <?php } else { ?>
           <h2><span class="line">
 		</span>
@@ -118,25 +118,49 @@
  <div class="featured-products-section">
     <div class="col-lg-4"> 
          <div class="men-category category">
+             <?php if ( get_theme_mod('featured_image_1') ) {  ?>
+            <a href="#"><img src="<?php echo get_theme_mod('featured_image_1'); ?>" /></a>
+            <?php } else {  ?>
             <img src="<?php echo get_template_directory_uri();?>/includes/images/image-14.jpg">
+            <?php }?>
             <figcaption>
+                <?php if ( get_theme_mod('featured_heading_1')) {  ?>
+                <h4><?php echo (get_theme_mod('featured_heading_1')); ?></h4>
+                <?php } else { ?>
                 <h4>MEN SECTION</h4>
+                <?php }?>
             </figcaption>
          </div>
     </div>
     <div class="col-lg-4"> 
         <div class="women-category category">
+            <?php if ( get_theme_mod('featured_image_2') ) {  ?>
+            <a href="#"><img src="<?php echo get_theme_mod('featured_image_2'); ?>" /></a>
+            <?php } else {  ?>
             <img src="<?php echo get_template_directory_uri()?>/includes/images/image-15.jpg">
+            <?php }?>
             <figcaption>
+                <?php if ( get_theme_mod('featured_heading_2')) {  ?>
+                <h4><?php echo (get_theme_mod('featured_heading_2')); ?></h4>
+                <?php } else { ?>
                 <h4>WOMEN SECTION</h4>
+                <?php }?>
             </figcaption>
         </div>
     </div>
     <div class="col-lg-4"> 
         <div class="kids-category category">
+            <?php if ( get_theme_mod('featured_image_3') ) {  ?>
+            <a href="#"><img src="<?php echo get_theme_mod('featured_image_3'); ?>" /></a>
+            <?php } else {  ?>
             <img src="<?php echo get_template_directory_uri()?>/includes/images/image-16.jpg">
+            <?php }?>
             <figcaption>
+                <?php if ( get_theme_mod('featured_heading_3')) {  ?>
+                <h4><?php echo (get_theme_mod('featured_heading_3')); ?></h4>
+                <?php } else { ?>
                 <h4>KIDS SECTION</h4>
+                <?php }?>
             </figcaption>
         </div>
     </div>
@@ -145,8 +169,8 @@
 <div class="featured-brands">
     <div class="brands-title">
         <div class="title1">
-        <?php if ( get_theme_mod('home_section')) {  ?>
-          <h2><?php echo (get_theme_mod('home_section')); ?></h2>
+        <?php if ( get_theme_mod('brands_section')) {  ?>
+          <h2><?php echo (get_theme_mod('brands_section')); ?></h2>
           <?php } else { ?>
           <h2><span class="line">
 		</span>
@@ -159,20 +183,76 @@
 </div>
     <div class="brands-slider">
         <div class="col-md-4">
+            <?php if ( get_theme_mod('brands_desc_heading')) {  ?>
+            <h1><?php echo (get_theme_mod('brands_desc_heading')); ?></h1>
+            <?php } else { ?>
             <h1> SUMMER BONANZA!!</h1>
+            <?php }?>
+            <?php if ( get_theme_mod('brands_desc')) {  ?>
+            <h1><?php echo (get_theme_mod('brands_desc')); ?></h1>
+            <?php } else { ?>
             <p><b> Get upto 40% off on top brands,Offers till 20th May,2015.Grab the special offers today!!</b></p>
+            <?php }?>
         </div>
         <div class="cat-flex col-md-8">    
         <div class="flexslider">
         <ul class="slides">
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-7.jpg" alt="..."/></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-8.jpg" alt="..." /></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-9.jpg" alt="..." /></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-10.jpg" alt="..." /></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-5.jpg" alt="..."/></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-11.jpg" alt="..." /></li>
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-12.jpg" alt="..." /></li>            
-            <li><img src="<?php echo get_template_directory_uri();?>/includes/images/image-4.jpg" alt="..." /></li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_1') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_1'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-7.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_2') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_2'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-8.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_3') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_3'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-9.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_4') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_4'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-10.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_5') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_5'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-5.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_6') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_6'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-11.jpg" alt="..."/>
+                <?php } ?>
+            </li>
+            <li>
+                <?php if ( get_theme_mod('brand_image_7') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_7'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-12.jpg" alt="..."/>
+                <?php } ?>
+            </li>            
+            <li>
+                <?php if ( get_theme_mod('brand_image_8') ) {  ?>
+                <a href="#"><img src="<?php echo get_theme_mod('brand_image_8'); ?>" /></a>
+                <?php } else {  ?>
+                <img src="<?php echo get_template_directory_uri();?>/includes/images/image-4.jpg" alt="..."/>
+                <?php } ?>
+            </li>
         </ul>
     </div>
     </div>
@@ -182,8 +262,8 @@
 
     <div class="recent-products-title">
         <div class="title1">
-        <?php if ( get_theme_mod('home_section')) {  ?>
-          <h2><?php echo (get_theme_mod('home_section')); ?></h2>
+        <?php if ( get_theme_mod('recent_section')) {  ?>
+          <h2><?php echo (get_theme_mod('recent_section')); ?></h2>
           <?php } else { ?>
           <h2><span class="line">
 		</span>

@@ -8,11 +8,11 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package fiveanddime
+ * @package blog
  */
 
 get_header(); ?>
-
+    <div class="col-xs-12 col-sm-6 col-lg-8">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -23,18 +23,20 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+				get_template_part( 'content', 'frontposts' );
 			?>
 
 		<?php endwhile; ?>
 
-		<?php fiveanddime_content_nav( 'nav-below' ); ?>
+		<?php blog_content_nav( 'nav-below' ); ?>
 
 	<?php else : ?>
 
 		<?php get_template_part( 'no-results', 'index' ); ?>
 
 	<?php endif; ?>
-
+    </div>
+<div class="col-xs-6 col-lg-4">
 <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>
